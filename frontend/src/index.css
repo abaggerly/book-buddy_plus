@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --bg: #f8f8f8;
+}
+
+* {
+  box-sizing: content-box;
+  margin: 0;
+}
+
+body {
+  margin: 0 auto;
+  background-color: var(--bg);
+  max-width: 1080px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.fourOhfour {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0.5px 1px hsla(0deg, 0%, 0%, 0.1);
+  padding: 5px 20px;
+  height: 2rem;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+  width: 15%;
+}
+
+.nav-bar a {
+  transition: color 0.1s ease-in-out;
+  color: #9a3f3f;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.nav-bar a:hover {
+  color: #748873;
+}
+
+/* BookList *********************/
+
+.books-list {
+  display: grid;
+  grid-template-columns: repeat(4, 15rem);
+  row-gap: 10px;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.books-list a {
+  color: black;
+  text-decoration: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.4s ease-in-out;
+  margin-bottom: 10px;
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 5px;
+  padding: 10px;
+  width: 200px;
+  height: 350px;
+  font-size: 1.1rem;
+  list-style: none;
+}
+
+.card-author {
+  transition: color 0.4s ease-in-out;
+  margin-top: 0.5rem;
+  color: darkgray;
+  font-size: 1rem;
+}
+
+.card img {
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  width: 10rem;
+  height: 15rem;
+  object-fit: cover;
+}
+
+.card:hover {
+  box-shadow:
+    rgba(0, 0, 0, 0.07) 0px 1px 2px,
+    rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px,
+    rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px,
+    rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.card:hover :nth-child(3) {
+  color: black;
+}
+
+.search-bar {
+  margin: 0 auto;
+  width: 85%;
+}
+
+/* BookPage *********************/
+
+.book-details-container {
+  display: flex;
+  margin: 2rem auto;
+  width: 80%;
+}
+
+.book-details-img {
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px,
+    rgba(60, 64, 67, 0.3) 0px 1px 4px 2px;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.book-details h1 {
+  margin-bottom: 0.5rem;
+}
+
+.book-details :nth-child(2) {
+  margin-bottom: 0.5rem;
+  color: hsla(0deg, 0%, 0%, 0.75);
+}
+
+.book-details :nth-child(3) {
+  width: 80%;
+  font-size: 1rem;
+}
+
+.lead {
+  font-size: 1rem;
+  text-align: left;
+}
+
+/* Login Page / Register Page *********************/
+.form-container {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.login-container {
+  margin: 5rem auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 2rem;
+  max-width: 400px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container h1 {
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.login-container label {
+  display: flex;
+  flex-direction: column;
+  color: #555;
+  font-weight: 500;
+}
+
+.login-container input {
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.6rem;
+  font-size: 1rem;
+}
+
+.login-container button {
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  padding: 0.7rem;
+  color: white;
+  font-size: 1rem;
+}
+
+.login-container button:hover {
+  background-color: #0056b3;
+}
+
+.login-container a {
+  display: block;
+  margin-top: 1rem;
+  color: #007bff;
+  text-align: center;
+  text-decoration: none;
+}
+
+.login-container a:hover {
+  text-decoration: underline;
+}
+
+/* RegisterPage */
+
+.register-container {
+  margin: 5rem auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 2rem;
+  max-width: 450px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.register-container h1 {
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.register-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.register-container label {
+  display: flex;
+  flex-direction: column;
+  color: #555;
+  font-weight: 500;
+}
+
+.register-container input {
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.6rem;
+  font-size: 1rem;
+}
+
+.register-container button {
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745;
+  padding: 0.7rem;
+  color: white;
+  font-size: 1rem;
+}
+
+.register-container button:hover {
+  background-color: #218838;
+}
+
+.register-container a {
+  display: block;
+  margin-top: 1rem;
+  color: #007bff;
+  text-align: center;
+  text-decoration: none;
+}
+
+.register-container a:hover {
+  text-decoration: underline;
+}
+
+/* User Profile **********/
+.user-profile-container {
+}
+
+.reservations-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+  list-style: none;
+}
+
+.reservations-list > :nth-child(even) {
+  background-color: lightgrey;
+}
+
+.reservations-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+  padding: 3px;
+}
+
+.reservations-items button {
+  transition: background-color 0.2s ease-in-out;
+  border: none;
+  background-color: #218838;
+  height: 1.8rem;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.reservations-items button:hover {
+  border: none;
+  background-color: #007bff;
+  height: 1.8rem;
+  font-size: 0.8rem;
+}
+
+.reservations-items p {
+  margin: 0;
+}
+
+/* Media Queries **********/
+@media (max-width: 1024px) {
+  ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .nav-items {
+    width: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .books-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-bar {
+    align-items: center;
+    height: auto;
+  }
+
+  .nav-items {
+    justify-content: space-evenly;
+    width: 25%;
+  }
+  .book-details-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .book-details :nth-child(3) {
+    width: 100%;
+  }
+
+  .form-container {
+    width: 70%;
+  }
+
+  .form-container,
+  .login-container,
+  .register-container {
+    margin: 2rem auto;
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .books-list {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .form-container,
+  .login-container,
+  .register-container {
+    margin: 2rem auto;
+    width: 70%;
+  }
+
+  .reservations-list {
+    width: 80%;
+  }
+
+  .nav-items {
+    justify-content: space-evenly;
+    width: 50%;
+  }
+  .nav-bar a {
+    font-size: 1rem;
+  }
+}
